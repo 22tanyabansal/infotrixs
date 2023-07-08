@@ -1,0 +1,48 @@
+#Project {
+  width: 100%;
+  height: max-content;
+  overflow-x: hidden;
+}
+.project__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.project__item {
+  background: var(--color-bg-variant);
+  padding: 5px;
+  overflow: hidden;
+  margin: 2px 10px;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.project__item:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
+}
+
+.project__item-image {
+  border-radius: 1.5rem;
+}
+
+.project__item h3 {
+  margin: 1 1 2rem;
+}
+
+.project__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 800px) {
+  .project__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  .project__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
